@@ -4,8 +4,11 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import fr.CCI.Java.Oceanback.dao.EspeceDAO;
 import fr.CCI.Java.Oceanback.model.Espece;
@@ -17,7 +20,17 @@ public class EspeceController {
 	private EspeceDAO especeDao;
 	
 	@GetMapping(value= "/especes")
-	public List<Espece> listeEspeces(){
+	public List<Espece> listEspeces(){
 		return especeDao.findAll();
+	}
+	
+	@PostMapping(value = "/especes")
+	public Espece createEspece(@RequestBody Espece espece) {
+		return especeDao.save(espece);
+	}
+	
+	@DeleteMapping(value = "/especes/{id}")
+	public void deleteEspece(@PathVariable Integer id) {
+		especeDao.deleteById(id);
 	}
 }

@@ -10,5 +10,5 @@ public interface EspeceDAO extends JpaRepository<Espece, Integer>{
 	
 	Espece findById(int id);
 	Espece findByNomIgnoreCase(String nom);
-	
+	void deleteById(Integer id);
 }
