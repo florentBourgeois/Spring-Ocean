@@ -14,6 +14,28 @@
 	<name>Ocean-back</name>
 	<description>Projet de démonstration pour l'ensemble des compétences spring vues en cours : partie backend</description>
 
+	<organization>
+        <name>UHA 4.0</name>
+        <url>http://www.0.4.uha.fr/</url>
+    </organization>
+ 
+    <developers>
+        <developer>
+            <id>FBourgeois</id>
+            <name>Florent Bourgeois</name>
+            <email>florent.bourgeois@uha.fr</email>
+        </developer>
+    </developers>
+    
+   	<inceptionYear>2019</inceptionYear>
+    
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -21,10 +43,10 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
+		    	<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
