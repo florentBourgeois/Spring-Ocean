@@ -29,7 +29,7 @@ public class OceanWithoutBackApplication {
 			System.out.println(espece);
 		}
 		
-//		SpringApplication.run(OceanWithoutBackApplication.class, args);
+		SpringApplication.run(OceanWithoutBackApplication.class, args);
 
 	}
 

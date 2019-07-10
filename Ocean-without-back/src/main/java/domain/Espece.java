@@ -31,7 +31,7 @@ public class Espece {
 
 	@Override
 	public String toString() {
-		return "Espece {nom='" + name + "', description='" + description + "']";
+		return "Espece {nom='" + name + "', description='" + description + "'}";
 	}
 	
 
