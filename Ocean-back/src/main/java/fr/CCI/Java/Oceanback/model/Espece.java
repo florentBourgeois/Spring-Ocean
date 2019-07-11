@@ -25,14 +25,6 @@ public class Espece implements ConsolePrintable{
 	private String nom;
 	private String description;
 	
-	 @OneToMany(mappedBy = "type", cascade = CascadeType.ALL)
-	 private Set<Poisson> poissons;
-
-    public Espece(String nom, String description, Poisson... poissons) {
-        this.nom = nom;
-        this.poissons = Stream.of(poissons).collect(Collectors.toSet());
-        this.poissons.forEach(x -> x.setType(this));
-    }
         
 	public Espece() {
 	}
@@ -48,14 +40,6 @@ public class Espece implements ConsolePrintable{
 		this.id = id;
 	}
 
-	public Set<Poisson> getPoissons() {
-		return poissons;
-	}
-
-	public void setPoissons(Set<Poisson> poissons) {
-		this.poissons = poissons;
-	}
-
 	public String getNom() {
 		return nom;
 	}
@@ -67,10 +51,6 @@ public class Espece implements ConsolePrintable{
 	}
 	public void setDescription(String description) {
 		this.description = description;
-	}
-	
-	public void AjouterPoisson(Poisson p) {
-		this.poissons.add(p);
 	}
 
 
