@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Mcommerce</title>
+
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.0.0-2/css/bootstrap.min.css" />
+
+</head>
+<body>
+
+
+<div class="container">
+
+    <h1>Les Especes marines</h1>
+    
+    
+
+    
+    
+    <div class="row">
+    	<div th:each="espece : ${especes}" class="col-md-4 my-1">
+    		 <p>espece <span th:text="${espece.id}"></span> : <span th:text="$espece.nom"></span> - <span th:text="$espece.description"></span></p>   
+
+        </div>
+    </div>
+
+</div>
+
+
+<script type="text/javascript" src="webjars/bootstrap/4.0.0-2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -23,6 +23,11 @@ public class EspeceController {
 	public List<Espece> listEspeces(){
 		return especeDao.findAll();
 	}
+	
+	@GetMapping(value= "/especes/{id}")
+	public Espece especeByID(@PathVariable int id){
+		return especeDao.findById(id);
+	}
 		
 	@PostMapping(value = "/especes")
 	public Espece createEspece(@RequestBody Espece espece) {
