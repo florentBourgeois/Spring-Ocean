@@ -16,3 +16,7 @@ INSERT INTO POISSON (ID, NOM, ESPECE_ID, PHOTO)
 
 INSERT INTO POISSON (ID, NOM, ESPECE_ID, PHOTO)
 			 VALUES(2, 'Narval', 3, 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Pod_Monodon_monoceros.jpg/1280px-Pod_Monodon_monoceros.jpg');
+
+INSERT INTO POISSON (ID, NOM, ESPECE_ID, PHOTO)
+			 VALUES(3, 'Dauphin', 1, 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Tursiops_truncatus_01.jpg/1280px-Tursiops_truncatus_01.jpg');
+

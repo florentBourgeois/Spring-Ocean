@@ -21,13 +21,15 @@
 
     <div class="starter-template">
         <h1>Spring-Ocean requête à un microservice</h1>
-        <h2>Les especes marines</h2>
+        <h2 th:text="${espece.nom}"></h2>
     </div>
 
-    
-    <ol>
-        <li th:each="espece : ${especes}">L'espece <span th:text="${espece.nom}"></span> est décrite par <span th:text="${espece.description}"></span>  </li>
-    </ol>
+    <div class="row">
+        <div th:each="poisson : ${poissons}" class="col-md-4 my-1">
+                <img th:src="${poisson.photo}"  class="card-img-top" />
+                <p th:text= "${poisson.nom}"></p>
+        </div>
+    </div>
 
 </main>
 <!-- /.container -->
